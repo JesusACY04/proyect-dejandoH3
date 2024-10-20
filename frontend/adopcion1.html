@@ -1,0 +1,64 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adopta - Dejando Huellas Cancún</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="data:,">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="adopcion1.html">Adopta</a></li>
+                <li><a href="sobre.html">Sobre Nosotros</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="formulario.html">adopcion-formulario</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="adopcion">
+        <h1>Animales en Adopción</h1>
+        <div class="filtros">
+            <label for="especie">Especie:</label>
+            <select id="especie">
+                <option value="todos">Todos</option>
+                <option value="perros">Perros</option>
+                <option value="gatos">Gatos</option>
+            </select>
+            <label for="edad">Edad:</label>
+            <select id="edad">
+                <option value="todas">Todas</option>
+                <option value="cachorro">Cachorro</option>
+                <option value="adulto">Adulto</option>
+            </select>
+        </div>
+        <div class="animales">
+            <!-- Aquí se cargarán dinámicamente los animales disponibles -->
+        </div>
+    </section>
+
+    <!-- Modal para mostrar los detalles de los animales -->
+    <div id="animalModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <img id="animalImage" src="" alt="Animal" />
+            <h2 id="animalName"></h2>
+            <p id="animalDescription"></p>
+            <p id="animalDetails"></p>
+            <button id="adoptButton">¡Adoptar!</button>
+        </div>
+    </div>
+
+    <footer>
+        <section>
+            <h2>Comentarios</h2>
+            <p>¡Nos encantaría saber tu opinión!</p>
+            <a href="https://angeldarki611.blogspot.com/2024/10/blog-post_17.html" class="btn-comentarios">Ver Comentarios</a>
+            <p>© 2024 Dejando Huellas Cancún</p>
+        </section>
+    </footer>
+    <script src="app.js"></script>
+</body>
+</html>
+

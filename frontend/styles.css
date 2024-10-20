@@ -1,0 +1,219 @@
+/* Estilos generales */
+body {
+    background-image: url('img/descarga.jpg'); /* Ruta de la imagen de fondo */
+    background-size: cover; /* Hace que la imagen cubra todo el fondo */
+    background-position: center; /* Centra la imagen */
+    background-attachment: fixed; /* La imagen no se desplaza al hacer scroll */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    color: #333; /* Mantiene el texto legible */
+    display: flex;
+    flex-direction: column; /* Alinea los elementos en una columna */
+    align-items: center; /* Centra horizontalmente */
+    justify-content: flex-start; /* Cambia a flex-start para evitar que todo el contenido se centre verticalmente */
+    min-height: 100vh; /* Usa min-height para ocupar toda la altura de la ventana */
+    text-align: center; /* Centra el texto */
+}
+
+/* Secciones transparentes */
+header, footer, .adopcion {
+    background-color: transparent; /* Hace transparente el fondo de estas secciones */
+}
+
+/* Estilo de imágenes */
+.animales div img {
+    width: 100%; /* Ajusta el ancho de la imagen al 100% del contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+    border-radius: 10px; /* Bordes redondeados para las imágenes */
+    object-fit: cover; /* Recorta la imagen para ajustarse al contenedor */
+    max-height: 200px; /* Controla la altura máxima de la imagen */
+}
+
+/* Estilo del header */
+header {
+    padding: 20px;
+    text-align: center;
+}
+
+/* Navegación */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    font-size: 24px; /* Tamaño de letra para los enlaces de navegación */
+}
+
+nav ul li a:hover {
+    background-color: #98c1ff;
+}
+
+/* Sección comentarios */
+section h2 {
+    font-size: 28px;
+    color: #0401cf;
+}
+
+.btn-comentarios {
+    background-color: #b3ecff;
+    color: rgb(0, 37, 245);
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+    font-size: 19px; /* Tamaño del texto en el botón de comentarios */
+}
+
+.btn-comentarios:hover {
+    background-color: #007399;
+}
+
+/* Estilo adopción */
+.adopcion {
+    padding: 40px;
+    background-color: transparent; /* Fondo transparente */
+}
+
+.adopcion h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #ffffff; /* Color para el título de adopción */
+}
+
+/* Filtros */
+.filtros {
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: bold;
+    margin-right: 10px;
+    font-size: 18px; /* Tamaño de letra para las etiquetas */
+}
+
+select {
+    padding: 8px;
+    margin-right: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+}
+
+/* Animales */
+.animales {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.animales div {
+    width: 200px;
+    padding: 15px;
+    background-color: rgba(255, 204, 102, 0.8); /* Transparencia en tarjetas de animales */
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.animales div:hover {
+    transform: scale(1.05);
+}
+label[for="especie"] {
+    color: #ffffff; /* Cambia este color por el que prefieras */
+}
+
+label[for="edad"] {
+    color: #ffffff; /* Cambia este color por el que prefieras */
+    margin-left: 15px; /* Ajusta el margen izquierdo según sea necesario */
+}
+
+/* Footer */
+footer {
+    color: rgb(255, 255, 255);
+    padding: 10px;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Cambiar el tamaño de letra para "Comentarios" */
+footer h2 {
+    font-size: 24px; /* Tamaño del título de comentarios */
+}
+
+/* Cambiar el tamaño de letra para el texto de comentarios */
+footer p {
+    font-size: 19px; /* Tamaño del texto "¡Nos encantaría saber tu opinión!" y el copyright */
+}
+
+
+/*MODALL*/
+
+/* Estilo del modal */
+.modal {
+    display: none; /* Oculto por defecto */
+    position: fixed; /* Se queda fijo en la pantalla */
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5); /* Fondo semitransparente */
+    overflow: auto;
+    justify-content: center;
+    align-items: center; /* Centrado vertical y horizontal */
+}
+
+.modal-content {
+    background-color: white;
+    margin: 1% auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%; /* Ajusta el tamaño según sea necesario */
+    max-width: 600px; /* Limita el ancho máximo */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3); /* Sombra para darle efecto */
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#animalImage {
+    width: 100%; /* Imagen en todo el ancho del modal */
+    max-height: 300px; /* Limita la altura máxima */
+    object-fit: cover;
+}
+
+#animalImage {
+    max-width: 100%;  /* Limita el ancho de la imagen al 100% del contenedor */
+    max-height: 400px;  /* Limita la altura máxima de la imagen */
+    object-fit: contain;  /* Mantiene las proporciones de la imagen */
+    display: block;  /* Asegura que la imagen se renderice como bloque */
+    margin: 0 auto;  /* Centra la imagen horizontalmente */
+}
+
